@@ -1,0 +1,255 @@
+/*MENU*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&family=Shrikhand&display=swap');
+
+:root {
+    --main-color: #9356DC; /* var(--main-color) */
+    --second-color: #FF79DA; /* var(--second-color) */
+    --light-grey-color: #99E2D0; /* var(--third-color) */
+  }
+  
+body{
+  font-family : 'Roboto', sans-serif;
+  margin: 0;
+  background: whitesmoke;
+}
+
+body h1{
+  font-family : 'Shrikhand', cursive;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+header{
+  z-index: 10;
+  background: white;
+  width: 100%;
+}
+
+.head{
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.3);
+  background: white;
+  position: relative;
+}
+
+.header-arrow{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 35px;
+  top: 40%;
+  font-size: 20px;
+}
+
+.image{
+  width: 100%;
+  height: 300px;
+}
+
+.image-menu{
+  margin-top: -80px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#menu{
+  background: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu{
+  margin-top: -100px;
+  padding: 0 20px;
+  width: 100%;
+  max-width: 1230px;
+  border-radius: 30px 30px 0 0;
+  background-color: #F7F7F7;
+}
+
+.menu-header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.full-heart{
+  color:transparent;
+  height: 21px;
+  width: 21.68px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #101010;
+}
+
+.full-heart:hover{
+  transition: 0.5s;
+  background-image: linear-gradient(180deg,var(--second-color) 0%,var(--main-color) 80%);
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: transparent;
+}
+
+.menu-header-title{
+  font-family : 'Shrikhand', cursive;
+}
+
+.menu-grid{
+  display: grid;
+  grid-gap: 40px;
+}
+
+.menu-grid-bloc{
+  display: grid;
+  grid-gap: 15px;
+}
+
+.menu-grid-title h3{
+  position: relative;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.menu-grid-title h3::after{
+  content:'';
+  width: 50px;
+  height: 4px;
+  background: #99E2D0;
+  position: absolute;
+  z-index: 20;
+  left: 0px;
+  bottom: -8px;
+}
+
+.menu-grid-case{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.validation-box{
+  display: none;
+  position: absolute;
+  background: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  right: 0px;
+  padding: 0 13px;
+  height: 100%;
+}
+
+.menu-grid-case:hover .validation-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: move-left 0.5s ease;
+  transform-origin: right;
+}
+
+@keyframes move-left{
+  0%{transform: scaleX(0)};
+  100%{transform: scaleX(-50px)};
+
+}
+
+.menu-case-price{
+  padding-right: 20px;
+  font-weight: bold;
+  padding-left: 7px;
+}
+
+.menu-case-dish-title{
+  font-weight: bold;
+}
+
+.dish-price{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-contain-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.menu-button{
+  opacity: 1;
+  background: linear-gradient(180deg,var(--second-color) 0%,var(--main-color) 80%);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 200px;
+  box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.3);
+  font-size: 18px;
+  margin: 50px 0;
+}
+
+.menu-button:hover{
+  opacity: 0.8;
+  cursor: pointer;
+  transition: 0.4s;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.65);
+}
+
+.footer{
+    width: 100%;
+    background: #353535;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-bottom: 20px;
+  }
+  
+
+
+  .footer a{
+    color:white;
+  }
+  
+  .footer-bloc{
+    display: inline;
+    width: 100%;
+    padding: 0 40px;
+  }
+  
+  .footer-logo{
+    font-family: 'Shrikhand', cursive;
+    font-size: 20px;
+    padding: 15px 0;
+  }
+  
+  .footer-link i{
+    margin-right: 7px;
+  }
+  
+  .footer-link{
+    margin-bottom: 10px;
+  
+  }
+  
+  .footer-title{
+    display:inline;
+    font-size: 16px;
+    font-weight: 400;
+  }
