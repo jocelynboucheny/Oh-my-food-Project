@@ -69,10 +69,10 @@ header{
 }
 
 .menu{
-  margin-top: -100px;
+  margin-top: -105px;
   padding: 0 20px;
   width: 100%;
-  max-width: 1230px;
+  max-width: 1100px;
   border-radius: 30px 30px 0 0;
   background-color: #F7F7F7;
 }
@@ -85,6 +85,8 @@ header{
 }
 
 .full-heart{
+  transition: -webkit-text-fill-color 3s;
+  transition: -webkit-text-stroke-color 3s;
   color:transparent;
   height: 21px;
   width: 21.68px;
@@ -143,6 +145,7 @@ header{
   background: white;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
   position: relative;
+  overflow: hidden;
 }
 
 .validation-box{
@@ -153,20 +156,47 @@ header{
   right: 0px;
   padding: 0 13px;
   height: 100%;
+  animation: move-right 2s ease;
 }
 
 .menu-grid-case:hover .validation-box{
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: move-left 0.5s ease;
+  animation: move-left 2s ease;
   transform-origin: right;
 }
 
-@keyframes move-left{
-  0%{transform: scaleX(0)};
-  100%{transform: scaleX(-50px)};
+.validation-box i {
+  font-size: 30px;
+  color: white;
+}
 
+.menu-grid-case:hover .menu-case-price{
+  padding-right: 70px;
+  transition: 2s ease;
+}
+
+.menu-case-dish{
+  white-space: nowrap;
+  overflow: hidden;
+  margin-left: 20px;
+}
+
+.menu-case-dish p{
+  overflow:hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+
+@keyframes move-left{
+  from{transform: scaleX(0)};
+   to{transform: scaleX(-50px)};
+}
+
+@keyframes move-right{
+  from {transform: scaleX(-50px)};
+   to{transform: scaleX(0)};
 }
 
 .menu-case-price{
@@ -185,6 +215,61 @@ header{
   justify-content: space-between;
   align-items: center;
 }
+
+.opacity{
+  animation: opacity 1s both;
+}
+
+@keyframes opacity {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+#case-1{
+  animation-delay: 0.1s;
+}
+
+#case-2{
+  animation-delay: 0.2s;
+}
+
+#case-3{
+  animation-delay: 0.3s;
+}
+
+#case-4{
+  animation-delay: 0.4s;
+}
+
+#case-5{
+  animation-delay: 0.5s;
+}
+
+#case-6{
+  animation-delay: 0.6s;
+}
+
+#case-7{
+  animation-delay: 0.7s;
+}
+
+#case-8{
+  animation-delay: 0.8s;
+}
+
+#case-9{
+  animation-delay: 0.9s;
+}
+
+#case-10{
+  animation-delay: 1s;
+}
+
+
 
 .menu-contain-button{
   display: flex;
@@ -252,4 +337,39 @@ header{
     display:inline;
     font-size: 16px;
     font-weight: 400;
+  }
+
+  @media screen and (min-width:1100px) {
+
+    .footer-bloc{
+      margin-left: 30%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .footer-link{
+      padding-top: 15px;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    .footer-logo{
+      font-size: 18px;
+      font-weight: 400;
+      order:1;
+    }
+
+    .image-menu{
+      margin-top: 0;
+    }
+
+    .menu{
+      margin-top: -50px;
+    }
+
+    .footer{
+      padding-top: 20px;
+    }
+
   }

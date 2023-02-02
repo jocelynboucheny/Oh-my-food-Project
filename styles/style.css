@@ -214,6 +214,7 @@ body a{
   cursor: pointer;
   transition: 0.4s;
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.65);
+  background: white;
 }
 
 .operation-title{
@@ -243,7 +244,7 @@ body a{
 
 .restaurants{
   margin: 0;
-  padding: 20px;
+  padding: 20px 5%;
   display: flex;
   justify-content: center;
   width: 90%;
@@ -310,9 +311,55 @@ body a{
 
 .restaurant-bloc-heart{
   margin-right: 20px;
+  
 }
 
+/*.empty-heart{
+  color:transparent;
+  height: 21px;
+  width: 21.68px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #101010;
+  animation: color-in 2s;
+  position:absolute;
+  left: 10px;
+}
+
+@keyframes color-in{
+  from {opacity: 0;}
+  to{opacity: 1;}
+}
+
+@keyframes color-out{
+  from {opacity: 1;}
+  to{opacity: 0;}
+}
+
+
 .full-heart{
+  color:transparent;
+  height: 21px;
+  width: 21.68px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke-width: 1px;
+  background-image: linear-gradient(180deg,var(--second-color) 0%,var(--main-color) 80%);
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: transparent;
+  opacity: 1;
+  
+}
+
+.full-heart:hover{
+  animation: color-in 2s;
+}*/
+
+.full-heart{
+  transition: -webkit-text-fill-color 3s;
+  transition: -webkit-text-stroke-color 3s;
   color:transparent;
   height: 21px;
   width: 21.68px;
@@ -323,12 +370,15 @@ body a{
   -webkit-text-stroke-color: #101010;
 }
 
+
 .full-heart:hover{
-  transition: 0.5s;
+  transition: 2s;
   background-image: linear-gradient(180deg,var(--second-color) 0%,var(--main-color) 80%);
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-color: transparent;
 }
+
+
 
 .restaurant-bloc-name{
   font-size: 18px;
@@ -379,4 +429,76 @@ body a{
   display:inline;
   font-size: 16px;
   font-weight: 400;
+}
+
+@media screen and (min-width:1100px) {
+
+  .footer-bloc{
+    margin-left: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-link{
+    padding-top: 15px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .footer-logo{
+    font-size: 18px;
+    font-weight: 400;
+    order:1;
+  }
+
+  .footer{
+    padding-top: 20px;
+  }
+
+  .operation-steps{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .operation-step p{
+    padding-right: 10px;
+  }
+
+  .operation{
+    padding-left: 100px;
+    padding-right: 0;
+    width: 830px;
+  }
+
+  .operation-bloc{
+    align-items: flex-start;
+  }
+
+  .operation-title{
+    margin-bottom: 20px;
+  }
+
+  .restaurants-cards{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .restaurants{
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .restaurants-bloc{
+    width: 930px;
+    padding-left: 100px; 
+  }
+
+  .restaurant-card{
+    width: 230px;
+  }
+
 }
