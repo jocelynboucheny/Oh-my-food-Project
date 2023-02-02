@@ -468,7 +468,7 @@ body a{
   }
 
   .operation{
-    padding-left: 100px;
+    padding-left: 20%;
     padding-right: 0;
     width: 830px;
   }
@@ -494,7 +494,7 @@ body a{
 
   .restaurants-bloc{
     width: 930px;
-    padding-left: 100px; 
+    padding-left: 20%; 
   }
 
   .restaurant-card{
