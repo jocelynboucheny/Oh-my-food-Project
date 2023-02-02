@@ -159,15 +159,15 @@ header{
   right: 0px;
   padding: 0 13px;
   height: 100%;
-  animation: move-right 2s ease;
+  animation: move-right 2s  ease;
   transition: all 2s;
-  transform-origin: right;
+ 
 }
 
 .menu-grid-case:hover .validation-box{
   
   animation: move-left 2s ease;
-  
+  transform-origin: right;
   visibility: visible;
 }
 
@@ -177,7 +177,7 @@ header{
 }
 
 .menu-grid-case:hover .menu-case-price{
-
+  transition: 2s;
   padding-right: 70px;
 }
 
@@ -200,23 +200,18 @@ header{
 }
 
 @keyframes move-left{
-  from{
+  0% {
     transform: scaleX(0);
     visibility: visible;
-  };
-   to{transform: scaleX(-50px)};
+  }
+   100% {transform: scaleX(-50px);}
+
 }
 
 @keyframes move-right{
-  from 
-  { 
-    
-    visibility: visible;
-  };
-   to{
-    width: 0;
-    visibility: hidden;
-  };
+  0%{transform: scaleX(-50px);}
+
+  100%{transform: scaleX(0);}
 }
 
 .menu-case-price{
