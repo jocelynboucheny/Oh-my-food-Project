@@ -130,7 +130,6 @@ header{
   height: 4px;
   background: #99E2D0;
   position: absolute;
-  z-index: 20;
   left: 0px;
   bottom: -8px;
 }
@@ -161,11 +160,11 @@ header{
   height: 100%;
   animation: move-right 2s  ease;
   transition: all 2s;
+  transform-origin: right;
  
 }
 
 .menu-grid-case:hover .validation-box{
-  
   animation: move-left 2s ease;
   transform-origin: right;
   visibility: visible;
@@ -181,10 +180,12 @@ header{
   padding-right: 70px;
 }
 
-.menu-grid-case .menu-case-price{
-
-  padding-right: 10px;
-  transition: all 2s ease;
+.menu-case-price{
+  padding-right: 20px;
+  font-weight: bold;
+  padding-left: 7px;
+  transition:  padding-right 2s;
+  padding-right: -70px;
 }
 
 .menu-case-dish{
@@ -212,12 +213,6 @@ header{
   0%{transform: scaleX(-50px);}
 
   100%{transform: scaleX(0);}
-}
-
-.menu-case-price{
-  padding-right: 20px;
-  font-weight: bold;
-  padding-left: 7px;
 }
 
 .menu-case-dish-title{
