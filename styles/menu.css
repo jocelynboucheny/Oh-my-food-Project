@@ -98,7 +98,7 @@ header{
 }
 
 .full-heart:hover{
-  transition: 0.5s;
+  transition: 3s;
   background-image: linear-gradient(180deg,var(--second-color) 0%,var(--main-color) 80%);
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-color: transparent;
